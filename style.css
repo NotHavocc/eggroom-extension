@@ -1,33 +1,74 @@
+:root {
+  --tile: 6.25vh; /* 75% out of 12 tiles, tiles are 40 x 40, tree is 105 x 91 */
+}
+
 html, body {
-  margin: 0;
   height: 100%;
   background: black;
   overflow: hidden;
 }
 
+body {
+    transition: opacity 0.4166666667s ease;
+}
+
+img {
+  image-rendering: pixelated;
+}
+
 #stage {
-  position: fixed;
-  inset: 0;
+  height: 100%;
 }
 
 audio{
-    display: none;
+  display: none;
 }
 
 #bg {
-  position: absolute;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 75vh; /* real eggroom is only 3/4 of the height of the screen*/
+  width: auto;
+}
+
+#tree {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform-origin: top left;
+  transform: translate(calc(var(--tile) * -2.5), calc(var(--tile) * -12));
+  width: 105px;
+  height: 91px;
+}
+
+#button1 {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform-origin: bottom left;
+  transform: translate(calc(var(--tile) * -2.5), calc(var(--tile) * -7));
+  height: calc(var(--tile) * 6);
+  width: calc(var(--tile) * 6 * (105/91));
+  z-index:3
+}
+
+#button2 {
   inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+  display: block;
+  z-index: 2;
+}
+
+.blocktree {
+  height: calc(var(--tile) * 6);
+  width: auto;
 }
 
 .hotspot {
-  position: absolute;
-  opacity: 0%;         /* set 0 later */
+  position: fixed;
+  opacity: 0%;
   border: none;
   padding: 0;
   cursor: pointer;
-  z-index: 1;
 }

@@ -8,17 +8,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body style="opacity: 0; background: black;">
   <audio loop autoplay>
     <source src="music/man.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
   <div id="stage">
-    <img id="bg" src="images/eggroom.png" alt="">
+    <img id="bg" src="images/bg_man96.png">
+    <div id="tree">
+      <img id="layer1" class="blocktree" src="images/spr_blocktree_parts/spr_blocktree_parts_1.png" style="position:absolute; transform-origin:top left;">
+      <img id="layer2" class="blocktree" src="images/spr_blocktree_parts/spr_blocktree_parts_2.png" style="position:absolute; transform-origin:top left;">
+      <img id="layer3" class="blocktree" src="images/spr_blocktree_parts/spr_blocktree_parts_3.png" style="position:absolute; transform-origin:top left;">
+    </div>
     <button id="button1" class="hotspot" onclick="dialogue1()"></button>
     <button id="button2" class="hotspot" onclick="dialogue2()"></button>
   </div>
   <script src="eggroom.js"></script>
+  <script src="tree.js"></script>
   </div>
 </body>
 

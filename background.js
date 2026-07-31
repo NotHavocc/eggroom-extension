@@ -52,3 +52,4 @@ api.webNavigation.onBeforeNavigate.addListener(async (details) => {
     api.tabs.update(details.tabId, { url: redirectUrl });
   }
 });
+
