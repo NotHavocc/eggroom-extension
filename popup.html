@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EggRoom</title>
+  <link rel="stylesheet" type="text/css" href="/webfonts/stylesheet.css">
+  <style>
+    body {
+      width: 240px;
+      font-family: 'Determination Mono', monospace;
+      background-color: #000;
+      color: #fff;
+      padding: 14px;
+      margin: 0;
+    }
+    h2 { font-size: 1rem; margin: 0 0 8px; }
+    p { font-size: 0.85rem; color: #aaa; margin: 4px 0; }
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    button {
+      font-family: 'Determination Mono', monospace;
+      width: 100%;
+      margin-top: 12px;
+      padding: 8px;
+      background: #000;
+      color: white;
+      border: solid;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    button:hover { background: #333; }
+  </style>
+</head>
+<body>
+  <h2>Egg Room</h2>
+  <p id="siteInfo">Target: —</p>
+  <p id="probInfo">Chance: —</p>
+  <div class="row">
+    <input type="checkbox" id="enabledToggle">
+    <label for="enabledToggle">Enabled</label>
+  </div>
+  <button id="openOptions">Open full settings</button>
+  <script src="popup.js"></script>
+</body>
+</html>

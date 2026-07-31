@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Egg Room - Settings</title>
+  <link rel="stylesheet" type="text/css" href="/webfonts/stylesheet.css">
+  <style>
+    body {
+      font-family: 'Determination Mono', monospace;
+      max-width: 480px;
+      margin: 40px auto;
+      color: #fff;
+      background-color: #000;
+    }
+    h1 { font-size: 1.4rem; }
+    label {
+      display: block;
+      margin-top: 16px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    input[type="text"], input[type="number"], textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      box-sizing: border-box;
+      font-size: 0.95rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .hint {
+      font-size: 0.8rem;
+      color: #777;
+      margin-top: 2px;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    button {
+      font-family: 'Determination Mono', monospace;
+      margin-top: 20px;
+      padding: 10px 18px;
+      background: #000;
+      color: white;
+      border: solid;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+    button:hover { background: #333; }
+    #status {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: green;
+      min-height: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Egg Room — Settings</h1>
+
+  <div class="row">
+    <input type="checkbox" id="enabled">
+    <label for="enabled" style="margin:0;">Enabled</label>
+  </div>
+
+  <label for="probability">Redirect chance (%)</label>
+  <input type="number" id="probability" min="0" max="100" step="1">
+
+  <button id="save">Save</button>
+  <div id="status"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>
