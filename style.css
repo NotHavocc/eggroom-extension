@@ -37,21 +37,10 @@ audio{
   position: fixed;
   bottom: 0;
   left: 50%;
-  transform-origin: top left;
-  transform: translate(calc(var(--tile) * -2.5), calc(var(--tile) * -12));
-  width: 105px;
-  height: 91px;
-}
-
-#button1 {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
   transform-origin: bottom left;
-  transform: translate(calc(var(--tile) * -2.5), calc(var(--tile) * -7));
+  transform: translate(calc(var(--tile) * -2.5), calc(var(--tile) * -7.25));
   height: calc(var(--tile) * 6);
   width: calc(var(--tile) * 6 * (105/91));
-  z-index:3
 }
 
 #button2 {
