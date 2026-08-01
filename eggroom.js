@@ -34,6 +34,9 @@ async function downloadPNG(fileName = "egg.png") {
     URL.revokeObjectURL(blobUrl);
 }
 
+document.getElementById("tree").addEventListener("click", dialogue1);
+document.getElementById("button2").addEventListener("click", dialogue2);
+
 //tree based on the render script
 const layer2 = document.getElementById('layer2');
 const layer3 = document.getElementById('layer3');

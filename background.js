@@ -4,6 +4,7 @@ const DEFAULTS = {
   allSites: true,    
   probability: 10,   
   enabled: true,
+  targetSite: "",
 };
 
 function getSettings() {
