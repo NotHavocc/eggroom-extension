@@ -72,7 +72,7 @@ audio{
 
 .hotspot {
   position: fixed;
-  opacity: 40%;
+  opacity: 0%;
   border: none;
   padding: 0;
   cursor: pointer;
