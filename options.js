@@ -10,8 +10,6 @@ const DEFAULTS = {
 function load() {
   api.storage.local.get(DEFAULTS, (settings) => {
     document.getElementById("enabled").checked = settings.enabled;
-    document.getElementById("targetSite").value = settings.targetSite;
-    document.getElementById("allSites").checked = settings.allSites;
     document.getElementById("probability").value = settings.probability;
   });
 }
