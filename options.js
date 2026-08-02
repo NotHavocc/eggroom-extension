@@ -3,7 +3,7 @@ const api = typeof browser !== "undefined" ? browser : chrome;
 const DEFAULTS = {
   targetSite: "",
   allSites: true,
-  probability: 10,
+  probability: 5,
   enabled: true,
 };
 
@@ -17,8 +17,6 @@ function load() {
 function save() {
   const settings = {
     enabled: document.getElementById("enabled").checked,
-    targetSite: document.getElementById("targetSite").value.trim(),
-    allSites: document.getElementById("allSites").checked,
     probability: Math.max(0, Math.min(100, Number(document.getElementById("probability").value) || 0)),
   };
   api.storage.local.set(settings, () => {

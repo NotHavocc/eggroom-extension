@@ -3,7 +3,7 @@ const api = typeof browser !== "undefined" ? browser : chrome;
 const DEFAULTS = {
   targetSite: "",
   allSites: true,
-  probability: 10,
+  probability: 5,
   enabled: true
 };
 
