@@ -4,6 +4,7 @@ const DEFAULTS = {
   allSites: true,    
   probability: 10,   
   enabled: true,
+  targetSite: "",
 };
 
 function getSettings() {
@@ -52,3 +53,4 @@ api.webNavigation.onBeforeNavigate.addListener(async (details) => {
     api.tabs.update(details.tabId, { url: redirectUrl });
   }
 });
+

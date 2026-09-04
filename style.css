@@ -1,33 +1,86 @@
+/*NOTE: this css contains magic numbers pulled from the games sprites. Don't mess with them please*/
+
+:root {
+  --tile: min(6.25vh, calc(100vw/10)); /* 75% out of 12 tiles or 1/10 width for phones (padding and such), tiles are 40 x 40, tree is 105 x 91 */
+}
+
 html, body {
-  margin: 0;
   height: 100%;
   background: black;
   overflow: hidden;
 }
 
+body {
+    transition: opacity 0.4166666667s ease;
+}
+
+img {
+  image-rendering: pixelated;
+}
+
 #stage {
-  position: fixed;
-  inset: 0;
+  height: 100%;
 }
 
 audio{
-    display: none;
+  display: none;
 }
 
 #bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: calc(var(--tile) * 12); /* real eggroom is only 12 tiles tall*/
+  width: auto;
+}
+
+#tree {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform-origin: bottom left;
+  transform: translate(calc(var(--tile) * -2.5), calc(var(--tile) * -7.25));
+  height: calc(var(--tile) * 6);
+  width: calc(var(--tile) * 6 * (105/91));
+}
+
+#button1 {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform-origin: bottom left;
+  transform: translate(calc(var(--tile) * -2.5), calc(var(--tile) * -7.25));
+  height: calc(var(--tile) * 6);
+  width: calc(var(--tile) * 6 * (105/91));
+  zindex: 3;
+}
+
+#button2 {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transform-origin: top left;
+  height: calc(var(--tile) * 6);
+  width: calc(var(--tile) * 3);
+  z-index: 2;
+}
+
+.blocktree {
+  height: calc(var(--tile) * 6);
+  width: auto;
+}
+
+.block {
+  height: calc(var(--tile)* 60/91);
+  width: auto;
 }
 
 .hotspot {
-  position: absolute;
-  opacity: 0%;         /* set 0 later */
+  position: fixed;
+  opacity: 0%;
   border: none;
   padding: 0;
   cursor: pointer;
-  z-index: 1;
 }
