@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Egg Room",
-  "version": "1.0",
+  "version": "1.2",
   "description": "Sometimes redirects to the EggRoom, sometimes not.",
   "permissions": ["storage", "webNavigation", "tabs"],
   "host_permissions": ["*://*/*"],
